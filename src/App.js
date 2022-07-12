@@ -7,13 +7,16 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Nav/>
-        <MakeManual/>
+      <Nav/>
         <div className='pages'>
           <Routes>
-            <Route
-              path="/"
+          <Route
+              exact path="/"
               element={< Homepage />}
+            />
+            <Route
+              exact path="/create"
+              element={< MakeManual />}
             />
           </Routes>
         </div>

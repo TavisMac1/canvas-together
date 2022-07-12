@@ -3,7 +3,7 @@ const MakeManual = () => {
         <div className="formStyle">
             <form>
                 <div class="title">
-                    <label className="Label">Enter your manuals title: </label>
+                    <label className="Label">Enter your manuals title </label>
                     <input type="text" id="title" name="title" />
                 </div>
                 <div class="description">
