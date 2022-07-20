@@ -80,3 +80,34 @@ input {
     border-radius: 15px;
     text-align:center;
 }
+
+.section {
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+
+.post {
+  background-color: rgb(247, 247, 247);
+  border: solid white;
+  border-radius: 10px;
+  margin-top: 50px;
+  color: #81dfff;
+  width: 50%;
+}
+
+.chapter {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color:rgb(131, 131, 131)
+}
+
+.user, .title, .category {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.hr {
+  color:rgba(131, 131, 131, 0.475)
+}
