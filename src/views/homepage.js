@@ -19,15 +19,15 @@ const Homepage = () => {
         <div className="section">
             {posts && posts.map((x) => (
                 <div className="post" key={x._id}>
-                    <h4 className="user"> user: {x.user} </h4>
-                    <h4 className="title"> title: {x.title} </h4>
-                    <h4 className="category"> category: {x.category} </h4>
-                    <h4> <strong> {x.createdAt} </strong></h4>
+                    <h4 className="user"> - user: {x.user} </h4>
+                    <h4 className="title"> - title: {x.title} </h4>
+                    <h4 className="category"> - category: {x.category} </h4>
+                    <h4 className="time"> <strong> {x.createdAt} </strong></h4>
                     <hr className="hr"></hr>
-                    <p> chapter 1 </p>
+                    <p className="chapTitle"> | chapter 1 </p>
                     <div className="chapter"> {x.chapter1} </div>
                     <hr className="hr"></hr>
-                    <p> chapter 2</p>
+                    <p className="chapTitle"> | chapter 2</p>
                     <div className="chapter"> {x.chapter2} </div>
                     <p>{x.chapter3}</p>
                 </div>

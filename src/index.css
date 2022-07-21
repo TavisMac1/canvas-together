@@ -13,11 +13,9 @@ body {
 }
 
 .navMenu {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+
+  text-align: left;
+  margin-left: 20px;
 }
 
 .Lnk {
@@ -27,7 +25,7 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
-  width: 150px;
+  width: 100px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -45,7 +43,7 @@ body {
   color: #f6f4e6;
     font-size: 1.2em;
     font-weight: 200;
-    margin-top: 200px;
+    margin-top: 0px;
     text-align: center;
 }
 .Label {
@@ -54,6 +52,16 @@ body {
   padding-top: 100px;
   padding-bottom: 10px;
 }
+
+.LabelErr {
+  width: 100%;
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  color: rgb(245, 135, 135);
+  font-family: monospace;
+}
+
 #title {
   width: 33%;
   height: 33px;
@@ -70,7 +78,8 @@ textarea {
   border: solid;
   border-color: aqua;
   border-width: 0.1px;
-  border-radius: 15px;
+  border-radius: 5px;
+  text-indent: 10px;
 }
 input {
   color: #81dfff;
@@ -79,6 +88,7 @@ input {
     border-width: 0.1px;
     border-radius: 15px;
     text-align:center;
+    font-family: monospace;
 }
 
 .section {
@@ -89,9 +99,9 @@ input {
 }
 
 .post {
-  background-color: rgb(247, 247, 247);
-  border: solid white;
-  border-radius: 10px;
+  background-color: rgb(67, 67, 67);
+  border: solid rgb(33, 33, 33);
+  border-radius: 5px;
   margin-top: 50px;
   color: #81dfff;
   width: 50%;
@@ -100,14 +110,37 @@ input {
 .chapter {
   margin-top: 15px;
   margin-bottom: 15px;
-  color:rgb(131, 131, 131)
+  color:rgb(210, 210, 210);
+  margin-left: 10px;
 }
 
-.user, .title, .category {
+.user, .title, .category, .time, .chapTitle {
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: 10px;
 }
 
 .hr {
   color:rgba(131, 131, 131, 0.475)
+}
+
+select {
+  background-color: rgb(45, 45, 45);
+  color:rgb(176, 230, 230);
+  width: 30%;
+  height: 50px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.btn {
+  width: 10%;
+  background-color: none;
+  color: #4f4f4f;
+  height: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  border-radius: 15px;
+  font-family: monospace;
 }
