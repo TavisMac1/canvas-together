@@ -39,16 +39,17 @@ const Homepage = () => {
             if (!res.ok) setSearchErr('No matches found :(')
     }
 
-    useEffect(() => { //on render set our state to our fetched json object so it is always up to date
-        const getPosts = async () => {
-            const res = await fetch('https://guarded-bayou-85189.herokuapp.com/all')
-            const result = await res.json()
+    const getPosts = async () => {
+        const res = await fetch('https://guarded-bayou-85189.herokuapp.com/all')
+        const result = await res.json()
 
-            if (res.ok) {
-                makePosts(result)
-                console.log('should get result back')
-            }
+        if (res.ok) {
+            makePosts(result)
+            console.log('should get result back')
         }
+    }
+
+    useEffect(() => { //on render set our state to our fetched json object so it is always up to date
         getPosts()
     }, [])
 
@@ -59,6 +60,9 @@ const Homepage = () => {
                 <button className="searchBtn"> <span class="material-symbols-outlined">
                 pageview
                 </span></button>
+                <button onClick={() => getPosts()} className="searchBtn"><span class="material-symbols-outlined">
+                restart_alt
+                </span> </button>
             </form>
 
             {posts && posts.map((x) => (
