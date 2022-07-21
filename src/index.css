@@ -165,9 +165,17 @@ select {
 
 .searchBtn {
   float: left;
+  margin-top: 7px;
+  background:none;
+  border:none;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.deleteBtn {
+  float: right;
   width: 50px;
   height: 35px;
-  margin-top: 7px;
   background:none;
   border:none;
   cursor: pointer;
