@@ -1,7 +1,24 @@
 import React, { useEffect, useState } from "react";
 
 const Homepage = () => {
+
+    const [searchInput, setSearch] = useState('')
     const [posts, makePosts] = useState(null) //set up getter and setter for this object
+    const [searchErr, setSearchErr] = useState('Search a category')
+
+    const searchRes = async (e) => { //for category matching
+        e.preventDefault()
+
+        const res = await fetch('https://guarded-bayou-85189.herokuapp.com/findRelated/'+ searchInput)
+            const result = await res.json()
+
+            if (res.ok) {
+                makePosts(result)
+                return
+            }
+            if (!res.ok) setSearchErr('No matches found :(')
+    }
+
     useEffect(() => { //on render set our state to our fetched json object so it is always up to date
         const getPosts = async () => {
             const res = await fetch('https://guarded-bayou-85189.herokuapp.com/all')
@@ -17,6 +34,11 @@ const Homepage = () => {
 
     return ( 
         <div className="section">
+            <form onSubmit={searchRes}>
+                <input onChange={(e) => setSearch(e.target.value)} className="searchBar" type="text" placeholder={searchErr}></input>
+                <button className="searchBtn"> | search</button>
+            </form>
+
             {posts && posts.map((x) => (
                 <div className="post" key={x._id}>
                     <h4 className="user"> - user: {x.user} </h4>

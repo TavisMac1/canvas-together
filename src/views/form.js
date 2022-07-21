@@ -34,12 +34,12 @@ const MakeManual = () => {
                 <div class="title">
                     <label className="LabelErr"> { err } </label>
                     <label className="Label">Enter your name </label>
-                    <input type="text" id="title" name="name"
+                    <input className="input" type="text" id="title" name="name"
                         onChange={(e) => setName(e.target.value)}
                         value={user}
                     />
                     <label className="Label">Enter your manuals title </label>
-                    <input type="text" id="title" name="title" 
+                    <input className="input" type="text" id="title" name="title" 
                         onChange={(e) => setTitle(e.target.value)}
                         value={title}
                     />

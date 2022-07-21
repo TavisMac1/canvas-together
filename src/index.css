@@ -13,7 +13,7 @@ body {
 }
 
 .navMenu {
-
+  margin-top: 20px;
   text-align: left;
   margin-left: 20px;
 }
@@ -81,7 +81,7 @@ textarea {
   border-radius: 5px;
   text-indent: 10px;
 }
-input {
+.input {
   color: #81dfff;
     border: solid;
     border-color: rgb(176, 230, 230);
@@ -114,14 +114,19 @@ input {
   margin-left: 10px;
 }
 
-.user, .title, .category, .time, .chapTitle {
+.user, .title, .category, .chapTitle {
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: 10px;
 }
 
 .hr {
-  color:rgba(131, 131, 131, 0.475)
+  color:rgba(131, 131, 131, 0.475);
+  background-color:rgba(131, 131, 131, 0.475);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
 }
 
 select {
@@ -143,4 +148,36 @@ select {
   margin-bottom: 35px;
   border-radius: 15px;
   font-family: monospace;
+}
+
+.searchBar {
+  float: left;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  background-color:rgb(62, 62, 62);
+  color:rgb(132, 197, 227);
+  position: sticky;
+  top: 0;
+}
+
+.searchBtn {
+  float: left;
+  width: 50px;
+  height: 35px;
+  margin-top: 7px;
+  background:none;
+  border:none;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.time {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  font-family: monospace;
+  color: #7b7b7b;
 }
